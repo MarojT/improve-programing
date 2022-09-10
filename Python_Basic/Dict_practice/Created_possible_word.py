@@ -27,6 +27,7 @@ def check_word(word):
 
 
 def possible_word(all_word, char_lst):
+    """Check that word can create by character in character list"""
     for word in all_word:
         char_in = 0
         for char in char_lst:
@@ -38,10 +39,13 @@ def possible_word(all_word, char_lst):
 
 
 def print_possible_word(checked_word):
+    """Print possible word"""
     possible_word_lst = []
     for word in checked_word:
         if checked_word[word] == 1:
             possible_word_lst.append(word)
+    if possible_word_lst is None:
+        print(f"Character you in put can't create any word in word_smple.txt")
     print(f"Possible word can create is ")
     print(possible_word_lst)
 
@@ -52,4 +56,3 @@ if __name__ == "__main__":
     checked_word = check_word(word_lst)
     possible_word_check = possible_word(word_lst, characters)
     print_possible_word(possible_word_check)
-    print()
