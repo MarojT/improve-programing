@@ -1,4 +1,5 @@
-"""This program take word from word_sample.exe then user need to input some alphabet
+"""This program take word from word_sample.exe
+then user need to input some alphabet.
 then the program will show possible word that can create."""
 
 
@@ -45,8 +46,8 @@ def print_possible_word(checked_word):
         if checked_word[word] == 1:
             possible_word_lst.append(word)
     if possible_word_lst is None:
-        print(f"Character you in put can't create any word in word_smple.txt")
-    print(f"Possible word can create is ")
+        print("Character you in put can't create any word in word_smple.txt")
+    print("Possible word can create is ")
     print(possible_word_lst)
 
 
